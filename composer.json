@@ -1,0 +1,37 @@
+{
+    "name": "reessolutions/module-base",
+    "description": "The base Reessolutions Module",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mark Rees",
+            "email": "mark@rees.solutions",
+            "homepage": "http://www.rees.solutions/",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "extensions@rees.solutions"
+    },
+    "require": {
+        "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+        "geoip2/geoip2": "^3.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Reessolutions\\Base\\": ""
+        }
+    },
+    "archive": {
+        "exclude": [
+            ".gitlab",
+            ".github"
+        ]
+    }
+}

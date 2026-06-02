@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+>
+    <testsuites>
+        <testsuite name="Reessolutions_Base Unit Tests">
+            <directory>Test/Unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">Service</directory>
+            <directory suffix=".php">Model</directory>
+            <directory suffix=".php">Helper</directory>
+            <directory suffix=".php">Plugin</directory>
+        </include>
+        <exclude>
+            <directory>Test</directory>
+            <directory>Setup</directory>
+        </exclude>
+    </coverage>
+
+    <php>
+        <ini name="memory_limit" value="512M"/>
+        <ini name="date.timezone" value="Europe/London"/>
+    </php>
+</phpunit>
